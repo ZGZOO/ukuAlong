@@ -1,6 +1,6 @@
 # Original App Design Project - README Template
 
-# Uku Along
+# Uku Along (can still be changed)
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@
 
 ### Description
 
-Uku Along is an app that has songs and for each song, it shows the chords of the ukulele, so the user can play along. User can record themselves. User can comment on him/herself.
+Uku Along is an app that users can create the songs that they want to cover, and they can add chords of the songs by themselves or record themselves singing the songs. Users can comment on both themselves and other users. (Lyrics: have an api to fetch all the lyrics of the songs.)
 
 ### App Evaluation
 
@@ -33,25 +33,27 @@ Uku Along is an app that has songs and for each song, it shows the chords of the
 **Required Must-have Stories**
 
 - User can sign up, sign in, stay signed in
-- User can see the songs
-- User can search for songs
-- User can click into the songs to see the lyrics and the chords
-- User can leave notes for him/herself (only visible to the user)
-- User can video him/herself while playing along
+- User can create a song that they want to cover
+  - The title of the song
+  - The artist
+  - The chords
+- User can record him/herself while playing along
+- User can comment on other users' covers
+- User can see other people's comment
 
 **Optional Nice-to-have Stories**
 
-- User can see the artist/album ... of the songs
-- User can play along with chords in real time
-- User can see other people's comment
+- User can see the lyrics
+- User can leave notes for him/herself (only visible to the user)
 
 ### 2. Screen Archetypes
 
 - Log in screen
   - User can sign up, sign in, stay signed in
 - Home screen
-  - User can see the songs
-  - User can search for songs
+  - User can type in the songs info
+  - User can see the list of the songs (history)
+  - User can record (a button)
   - User can click into the Song screen (present modally - full screen)
 - Song screen
   - User can see the lyrics and the chords of the song
