@@ -18,7 +18,7 @@ Uku Along is an app that users can create the chords of their original songs or 
 ### App Evaluation
 
 
-[Evaluation of your app across the following attributes]
+[Evaluation of our app across the following attributes]
 
 - **Category:** Social Networking / Music
 - **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a tablet, such as spotify or other similar apps. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
