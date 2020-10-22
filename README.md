@@ -110,8 +110,8 @@ Uku Along is an app that users can create the chords of their original songs or 
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+- The hand sketched wireframes 
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1603392619/ukualong_vvivq5.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
