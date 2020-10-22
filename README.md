@@ -13,18 +13,18 @@
 
 ### Description
 
-Uku Along is an app that users can create the songs that they want to cover, and they can add chords of the songs by themselves or record themselves singing the songs. Users can comment on both themselves and other users. (Lyrics: have an api to fetch all the lyrics of the songs.)
+Uku Along is an app that users can create the chords of their original songs or cover other songs, and record themselves singing the songs. Users can comment on both themselves and on other users.
 
 ### App Evaluation
 
 [Evaluation of your app across the following attributes]
 
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Social Networking / Music
+- **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a tablet, such as spotify or other similar apps. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
+- **Story:** The user can view the chords data posted by other users. The users can record themselves. The user can also comment/chat on other users.
+- **Market:** Any individual could choose to use this app.
+- **Habit:** This app could be used as often as the user wants to learn or practice the chords of songs.
+- **Scope:** First we start with the original or the cover songs produced by the users and they can input the chords of the songs, then this could evolve into a music-tabs sharing community application as well to broaden its usage. Large potential for use with spotify, apple music, or other music streaming applications.
 
 ## Product Spec
 
@@ -37,9 +37,11 @@ Uku Along is an app that users can create the songs that they want to cover, and
   - The title of the song
   - The artist
   - The chords
+- User can search the songs that they want to learn
 - User can record him/herself while playing along
 - User can comment on other users' covers
 - User can see other people's comment
+- User can chat with other users
 
 **Optional Nice-to-have Stories**
 
@@ -48,42 +50,62 @@ Uku Along is an app that users can create the songs that they want to cover, and
 
 ### 2. Screen Archetypes
 
-- Log in screen
-  - User can sign up, sign in, stay signed in
+- Login screen
+  - Allow user to input username and password
 - Home screen
-  - User can type in the songs info
-  - User can see the list of the songs (history)
-  - User can record (a button)
-  - User can click into the Song screen (present modally - full screen)
+  - A search bar for user to search songs
+    - All the covers of the songs
+  - Feeds of the songs that have been recently uploaded and recorded
 - Song screen
-  - User can see the lyrics and the chords of the song
-  - User can video him/herself while playing along
-  - have a recording button (toggle (red/grey), the user gets notified by the recording button)
+  - Detail of the songs (chords and lyrics)
+  - A record button for users if they want to record themselves
+    - toggle (red/grey), the user gets notified by the recording button
   - User can go back to Home screen
 - Profile screen (for the user)
-  - User can see the history of the songs he/she played
-  - User can click into the History screen (present modally - full screen)
-- History screen
-  - User can see the notes of that song
-  - User can see the recording if there is one
-  - User can go back to Profile screen
+  - User can see the history of the songs he/she posted
+    - can go to Song screen to view the details of the songs
+  - User can see the history of the songs he/she bookmarked
+    - can go to Song screen to view the details of the songs
+  - User can see the history of the songs he/she recorded
+    - present modally a screen that contains the recording
+- Chat screen
+  - The user can do a one-on-one chat or a group chat with other users
+- Chords screen
+  - The guide of all the ukulele chords (pictures)
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-- [fill out your first tab]
-- [fill out your second tab]
-- [fill out your third tab]
+- Home
+- Profile
+- Chords
 
 **Flow Navigation** (Screen to Screen)
 
-- [list first screen here]
-  - [list screen navigation here]
-  - ...
-- [list second screen here]
-  - [list screen navigation here]
-  - ...
+- Login/Sign-in screen
+  - Home screen
+- Home screen
+  - Song screen
+  - Profile screen
+  - Chat screen
+  - Chords screen
+  - Logout
+    - Login/Sign-in screen
+- Song screen
+  - Home screen
+- Profile screen
+  - Song screen
+  - Home screen
+  - Chat screen
+  - Chords screen
+- Chat screen
+  - Home screen
+- Chords screen
+  - Home screen
+  - Profile screen
+  - Chat screen
+
 
 ## Wireframes
 
