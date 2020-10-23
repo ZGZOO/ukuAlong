@@ -122,6 +122,7 @@ Uku Along is an app that users can create the chords of their original songs or 
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1603423374/UkuAlong_Wireframe6_wi8wff.png" width=600>
 
 ### [BONUS] Interactive Prototype
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1603426492/ukualong_gif_hfgioc.gif" width=600>
 
 ## Schema
 
