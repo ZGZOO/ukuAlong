@@ -1,6 +1,6 @@
 # Original App Design Project - README Template
 
-# Uku Along (can still be changed)
+# Uku Along
 
 ## Table of Contents
 
