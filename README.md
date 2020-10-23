@@ -13,7 +13,7 @@
 
 ### Description
 
-Uku Along is an app that users can create the chords of their original songs or cover other songs, and record themselves singing the songs. Users can comment on both themselves and on other users.
+Uku Along is an app in which users can create ukulele chords of their original songs or to cover existing songs and record themselves while playing the songs with a ukulele. Users can also favor songs that they like, saving them in their own accounts for future reference. Users can also make friends and chat with them in the community of Uku Along.
 
 ### App Evaluation
 
@@ -142,4 +142,3 @@ Uku Along is an app that users can create the chords of their original songs or 
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
 
-- Uku Along is an app in which users can create ukulele chords of their original songs or to cover existing songs and record themselves while playing the songs with a ukulele. Users can also favor songs that they like, saving them in their own accounts for future reference. Users can also make friends and chat with them in the community of Uku Along.
