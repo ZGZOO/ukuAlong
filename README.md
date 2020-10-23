@@ -110,7 +110,10 @@ Uku Along is an app that users can create the chords of their original songs or 
 
 ## Wireframes
 
-- The hand sketched wireframes 
+- The hand sketched wireframes - basic outline with tab bar controller
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1603429506/ukualong_sketch_esxmuk.jpg" width=600>
+
+- The hand sketched wireframes - with details of the flow, displayed infomation and user interaction
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1603392619/ukualong_vvivq5.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
@@ -137,3 +140,6 @@ Uku Along is an app that users can create the chords of their original songs or 
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+
+- Uku Along is an app in which users can create ukulele chords of their original songs or to cover existing songs and record themselves while playing the songs with a ukulele. Users can also favor songs that they like, saving them in their own accounts for future reference. Users can also make friends and chat with them in the community of Uku Along.
