@@ -18,7 +18,7 @@ Uku Along is an app that users can create the chords of their original songs or 
 ### App Evaluation
 
 
-[Evaluation of your app across the following attributes]
+[Evaluation of our app across the following attributes]
 
 - **Category:** Social Networking / Music
 - **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a tablet, such as spotify or other similar apps. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
@@ -114,8 +114,15 @@ Uku Along is an app that users can create the chords of their original songs or 
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1603392619/ukualong_vvivq5.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423375/UkuAlong_Wireframe1_wscpab.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423375/UkuAlong_Wireframe2_y2soew.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1603424579/UkuAlong_Wireframe3_o502qe.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423374/UkuAlong_Wireframe4_fyxtmd.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423377/UkuAlong_Wireframe5_lluh5v.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423374/UkuAlong_Wireframe6_wi8wff.png" width=600>
 
 ### [BONUS] Interactive Prototype
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1603426492/ukualong_gif_hfgioc.gif" width=600>
 
 ## Schema
 
