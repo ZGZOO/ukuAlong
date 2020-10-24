@@ -165,10 +165,10 @@ Chat (?? need discussion)
 | :---: | :---: | :---: |
 | coverId | Number | unique ID for each cover |
 
-Heart Button
+Heart Button (just a variable to control it. eg: isFave)
 
-- For the showing of the heart button, I think we have to check if a certain cover is inside the array of the current user's favorites array. If so, then the heart is red. If not, the heart is white.
-- For the functionality of the heart button, I think we implement like this: Heart default is white. If the user clicks the white heart, it will turn red, and the cover is added to the user's favorites array. If the user clicks the red heart, it will turn white, and the cover is removed from the user's favorites array.
+- For the functionality of the heart button, I think we implement like this: If the user clicks the white heart, and the cover is added to the user's favorites array. If the user clicks the red heart, and the cover is removed from the user's favorites array.
+- For the showing of the heart button, I think we just have a boolean (isFave) to control it's color. We need to check if a certain cover is inside the array of the current user's favorites array. If yes (then isFave == true), then the heart is red. If no (then isFave == false), the heart is white.
 
 #### Unsolved questions:
 
@@ -188,5 +188,5 @@ Heart Button
 ### [OPTIONAL:] Existing API Endpoints
 
 - Uberchord API (read more carefully into that, and test if it can work)
-- songsterr API (songs info)
-- Spotify API
+- songsterr API (songs info) (use when user create a cover, song's info)
+- Spotify API (use when user create a cover, song's info)
