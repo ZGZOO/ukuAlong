@@ -17,7 +17,6 @@ Uku Along is an app in which users can create ukulele chords of their original s
 
 ### App Evaluation
 
-
 [Evaluation of our app across the following attributes]
 
 - **Category:** Social Networking / Music
@@ -107,16 +106,16 @@ Uku Along is an app in which users can create ukulele chords of their original s
   - Profile screen
   - Chat screen
 
-
 ## Wireframes
 
 - The hand sketched wireframes - basic outline with tab bar controller
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603429506/ukualong_sketch_esxmuk.jpg" width=600>
+  <img src="https://res.cloudinary.com/headincloud/image/upload/v1603429506/ukualong_sketch_esxmuk.jpg" width=600>
 
 - The hand sketched wireframes - with details of the flow, displayed infomation and user interaction
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603392619/ukualong_vvivq5.jpg" width=600>
+  <img src="https://res.cloudinary.com/headincloud/image/upload/v1603392619/ukualong_vvivq5.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1603423375/UkuAlong_Wireframe1_wscpab.png" width=600>
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1603423375/UkuAlong_Wireframe2_y2soew.png" width=600>
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1603424579/UkuAlong_Wireframe3_o502qe.png" width=600>
@@ -125,15 +124,60 @@ Uku Along is an app in which users can create ukulele chords of their original s
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1603423374/UkuAlong_Wireframe6_wi8wff.png" width=600>
 
 ### [BONUS] Interactive Prototype
+
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1603426492/ukualong_gif_hfgioc.gif" width=600>
 
 ## Schema
 
-[This section will be completed in Unit 9]
-
 ### Models
 
-[Add table of models]
+User
+| Property | Type |Description |
+| :---: | :---: | :---: |
+| userId | Number | unique ID for each user |
+| username | String | the name of the user |
+| password | String | the password of the user |
+| level | String | level of the user based on the number of the posts and the likes they receive |
+| posts | Array (of the cover model) | covers created by the user |
+| favorites | Array (of the cover model) | covers favored by the user |
+| recordings | Array (of the recording model) | the recordings by the user |
+
+Cover
+| Property | Type |Description |
+| :---: | :---: | :---: |
+| coverId | Number | unique ID for each cover |
+| coverCreator | String | name of the cover creator (basically username) |
+| songTitle | String | the title of the covered song |
+| songArtist | String | the artist of the covered song |
+| coverContent | String | the content of the covered song with chords and lyrics|
+| recordings | Array (of the recording model) | the recordings by the user |
+| peopleWhoFavoredThePost | Array (of the user model) | the users who favored this cover |
+
+Recording (grid display like Flix app)
+| Property | Type |Description |
+| :---: | :---: | :---: |
+| userId | Number | unique ID for each user |
+| coverId | Number | unique ID for each cover |
+| video | ?? | the video content of the recording |
+
+Chat (?? need discussion)
+| Property | Type |Description |
+| :---: | :---: | :---: |
+| coverId | Number | unique ID for each cover |
+
+Heart Button
+
+- For the showing of the heart button, I think we have to check if a certain cover is inside the array of the current user's favorites array. If so, then the heart is red. If not, the heart is white.
+- For the functionality of the heart button, I think we implement like this: Heart default is white. If the user clicks the white heart, it will turn red, and the cover is added to the user's favorites array. If the user clicks the red heart, it will turn white, and the cover is removed from the user's favorites array.
+
+#### Unsolved questions:
+
+- Array type?? in Swift??
+- Ideas for the chat:
+  - First step: get the global chat working
+  - If more time, develop group chat based on the genre (users can join freely)
+  - Discuss (group chat)
+  - Direct (one-to-one tutorial Mrugesh shared)
 
 ### Networking
 
@@ -141,4 +185,8 @@ Uku Along is an app in which users can create ukulele chords of their original s
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
+### [OPTIONAL:] Existing API Endpoints
 
+- Uberchord API (read more carefully into that, and test if it can work)
+- songsterr API (songs info)
+- Spotify API
