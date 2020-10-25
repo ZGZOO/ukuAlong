@@ -134,9 +134,10 @@ Uku Along is an app in which users can create ukulele chords of their original s
 User
 | Property | Type |Description |
 | :---: | :---: | :---: |
-| userId | Number | unique ID for each user |
+| userId | Number(?String?, hash) | unique ID for each user |
 | username | String | the name of the user |
 | password | String | the password of the user |
+| profilePhoto | Image | the profile photo of the user |
 | level | String | level of the user based on the number of the posts and the likes they receive |
 | posts | Array (of the cover model) | covers created by the user |
 | favorites | Array (of the cover model) | covers favored by the user |
@@ -150,7 +151,7 @@ Cover
 | songTitle | String | the title of the covered song |
 | songArtist | String | the artist of the covered song |
 | coverContent | String | the content of the covered song with chords and lyrics|
-| recordings | Array (of the recording model) | the recordings by the user |
+| recordings (aac) | Array (of the recording model) | the recordings of that cover by different users |
 | peopleWhoFavoredThePost | Array (of the user model) | the users who favored this cover |
 
 Recording (grid display like Flix app)
@@ -160,7 +161,7 @@ Recording (grid display like Flix app)
 | coverId | Number | unique ID for each cover |
 | video | ?? | the video content of the recording |
 
-Chat (?? need discussion)
+Chat (refer to Yelpy)
 | Property | Type |Description |
 | :---: | :---: | :---: |
 | coverId | Number | unique ID for each cover |
@@ -172,18 +173,46 @@ Heart Button (just a variable to control it. eg: isFave)
 
 #### Unsolved questions:
 
-- Array type?? in Swift??
+- Array type?? in Swift?? [[]] NSDictionary!
 - Ideas for the chat:
   - First step: get the global chat working
-  - If more time, develop group chat based on the genre (users can join freely)
-  - Discuss (group chat)
+  - If more time, develop group chat based on the genre (users can join freely) (we hardcoded the groups)
+  - Discuss (group chat, users can create their own groups)
   - Direct (one-to-one tutorial Mrugesh shared)
 
 ### Networking
 
+- (create api for the users)
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+- Home Feed Screen
+  - (Read/GET) Query all covers from our database
+  - (Create/POST) Create a new like on a cover
+  - (Delete) Unlike a cover
+- Chords Screen
+  - (Read/GET) Query all chords from an existing API (Uberchord)
+- Profile Screen
+  - (Read/GET) Query all the info of the user from our database
+  - (Delete) Delete a recording
+- Edit Profile Screen
+  - (Update/PUT) Update user profile info
+- Create Song Chords Screen
+  - (Read/GET) Query the lyrics of the song based on the song title that user input from existing API
+  - (Create/POST) Create a new cover
+- Song Screen
+  - (Read/GET) Query the info of the cover from our database (cover model)
+  - (Create/POST) Create a new like on a cover
+  - (Delete) Unlike a cover
+  - (Create/POST) Create a new recording of the user/cover
+- Recordings Screen (a grid of all recordings)
+  - (Read/GET) Query all the recordings of a certain cover from our database (recording model)
+- Recording is playing Screen (a single recording)
+  - (Read/GET) Query the video content data of the selected recording from our database (recording model)
+- Chat Screen
+  - (Read/GET) Query all the messages from our database
+  - (Create/POST) Create a message
+
 
 ### [OPTIONAL:] Existing API Endpoints
 
