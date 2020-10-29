@@ -17,7 +17,6 @@ Uku Along is an app in which users can create ukulele chords of their original s
 
 ### App Evaluation
 
-
 [Evaluation of our app across the following attributes]
 
 - **Category:** Social Networking / Music
@@ -107,38 +106,117 @@ Uku Along is an app in which users can create ukulele chords of their original s
   - Profile screen
   - Chat screen
 
-
 ## Wireframes
 
 - The hand sketched wireframes - basic outline with tab bar controller
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603429506/ukualong_sketch_esxmuk.jpg" width=600>
+  <img src="https://res.cloudinary.com/headincloud/image/upload/v1603429506/ukualong_sketch_esxmuk.jpg" width=600>
 
 - The hand sketched wireframes - with details of the flow, displayed infomation and user interaction
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603392619/ukualong_vvivq5.jpg" width=600>
+  <img src="https://res.cloudinary.com/headincloud/image/upload/v1603392619/ukualong_vvivq5.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423375/UkuAlong_Wireframe1_wscpab.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423375/UkuAlong_Wireframe2_y2soew.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603424579/UkuAlong_Wireframe3_o502qe.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423374/UkuAlong_Wireframe4_fyxtmd.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423377/UkuAlong_Wireframe5_lluh5v.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423374/UkuAlong_Wireframe6_wi8wff.png" width=600>
+
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604005825/ukuAlong_wireframe1.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604010102/ukuAlong_wireframe2.1.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604011388/ukuAlong_wireframe3.1.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604005824/ukuAlong_wireframe4.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604010310/ukuAlong_wireframe7.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604010627/ukuAlong_wireframe5.1.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604010627/ukuAlong_wireframe6.1.png" width=600>
 
 ### [BONUS] Interactive Prototype
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603426492/ukualong_gif_hfgioc.gif" width=600>
+
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604012691/ukualong_gif2_aeesp7.gif" width=600>
 
 ## Schema
 
-[This section will be completed in Unit 9]
-
 ### Models
 
-[Add table of models]
+User
+| Property | Type |Description |
+| :---: | :---: | :---: |
+| userId | Number(?String?, hash) | unique ID for each user |
+| username | String | the name of the user |
+| password | String | the password of the user |
+| profilePhoto | Image | the profile photo of the user |
+| level | String | level of the user based on the number of the posts and the likes they receive |
+| posts | Array (of the cover model) | covers created by the user |
+| favorites | Array (of the cover model) | covers favored by the user |
+| recordings | Array (of the recording model) | the recordings by the user |
+
+Cover
+| Property | Type |Description |
+| :---: | :---: | :---: |
+| coverId | Number | unique ID for each cover |
+| coverCreator | String | name of the cover creator (basically username) |
+| songTitle | String | the title of the covered song |
+| songArtist | String | the artist of the covered song |
+| coverContent | String | the content of the covered song with chords and lyrics|
+| recordings (aac) | Array (of the recording model) | the recordings of that cover by different users |
+| peopleWhoFavoredThePost | Array (of the user model) | the users who favored this cover |
+
+Recording (grid display like Flix app)
+| Property | Type |Description |
+| :---: | :---: | :---: |
+| userId | Number | unique ID for each user |
+| coverId | Number | unique ID for each cover |
+| video | ?? | the video content of the recording |
+
+Chat (refer to Yelpy)
+| Property | Type |Description |
+| :---: | :---: | :---: |
+| coverId | Number | unique ID for each cover |
+
+Heart Button (just a variable to control it. eg: isFave)
+
+- For the functionality of the heart button, I think we implement like this: If the user clicks the white heart, and the cover is added to the user's favorites array. If the user clicks the red heart, and the cover is removed from the user's favorites array.
+- For the showing of the heart button, I think we just have a boolean (isFave) to control it's color. We need to check if a certain cover is inside the array of the current user's favorites array. If yes (then isFave == true), then the heart is red. If no (then isFave == false), the heart is white.
+
+#### Unsolved questions:
+
+- Array type?? in Swift?? [[]] NSDictionary!
+- Ideas for the chat:
+  - First step: get the global chat working
+  - If more time, develop group chat based on the genre (users can join freely) (we hardcoded the groups)
+  - Discuss (group chat, users can create their own groups)
+  - Direct (one-to-one tutorial Mrugesh shared)
 
 ### Networking
 
+- (create api for the users)
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+- Home Feed Screen
+  - (Read/GET) Query all covers from our database
+  - (Create/POST) Create a new like on a cover
+  - (Delete) Unlike a cover
+- Chords Screen
+  - (Read/GET) Query all chords from an existing API (Uberchord)
+- Profile Screen
+  - (Read/GET) Query all the info of the user from our database
+  - (Delete) Delete a recording
+- Edit Profile Screen
+  - (Update/PUT) Update user profile info
+- Create Song Chords Screen
+  - (Read/GET) Query the lyrics of the song based on the song title that user input from existing API
+  - (Create/POST) Create a new cover
+- Song Screen
+  - (Read/GET) Query the info of the cover from our database (cover model)
+  - (Create/POST) Create a new like on a cover
+  - (Delete) Unlike a cover
+  - (Create/POST) Create a new recording of the user/cover
+- Recordings Screen (a grid of all recordings)
+  - (Read/GET) Query all the recordings of a certain cover from our database (recording model)
+- Recording is playing Screen (a single recording)
+  - (Read/GET) Query the video content data of the selected recording from our database (recording model)
+- Chat Screen
+  - (Read/GET) Query all the messages from our database
+  - (Create/POST) Create a message
 
 
+### [OPTIONAL:] Existing API Endpoints
+
+- Uberchord API (read more carefully into that, and test if it can work)
+- songsterr API (songs info) (use when user create a cover, song's info)
+- Spotify API (use when user create a cover, song's info)
