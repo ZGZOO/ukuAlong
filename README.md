@@ -183,9 +183,7 @@ Heart Button (just a variable to control it. eg: isFave)
 
 ### Networking
 
-- (create api for the users)
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+#### A list of network requests by screen:
 
 - Home Feed Screen
   - (Read/GET) Query all covers from our database
@@ -214,6 +212,7 @@ Heart Button (just a variable to control it. eg: isFave)
   - (Read/GET) Query all the messages from our database
   - (Create/POST) Create a message
 
+#### Basic snippets for each Firebase network request:
 
 ### [OPTIONAL:] Existing API Endpoints
 
