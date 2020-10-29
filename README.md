@@ -116,12 +116,12 @@ Uku Along is an app in which users can create ukulele chords of their original s
 
 ### [BONUS] Digital Wireframes & Mockups
 
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423375/UkuAlong_Wireframe1_wscpab.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423375/UkuAlong_Wireframe2_y2soew.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603424579/UkuAlong_Wireframe3_o502qe.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423374/UkuAlong_Wireframe4_fyxtmd.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423377/UkuAlong_Wireframe5_lluh5v.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1603423374/UkuAlong_Wireframe6_wi8wff.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604005825/ukuAlong_wireframe1.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604005825/ukuAlong_wireframe2.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604005828/ukuAlong_wireframe3.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604005824/ukuAlong_wireframe4.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604005825/ukuAlong_wireframe5.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604005825/ukuAlong_wireframe6.png" width=600>
 
 ### [BONUS] Interactive Prototype
 
