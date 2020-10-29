@@ -117,9 +117,10 @@ Uku Along is an app in which users can create ukulele chords of their original s
 ### [BONUS] Digital Wireframes & Mockups
 
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1604005825/ukuAlong_wireframe1.png" width=600>
-<img src="https://res.cloudinary.com/headincloud/image/upload/v1604005825/ukuAlong_wireframe2.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604010102/ukuAlong_wireframe2.1.png" width=600>
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1604005828/ukuAlong_wireframe3.png" width=600>
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1604005824/ukuAlong_wireframe4.png" width=600>
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604010310/ukuAlong_wireframe7.png" width=600>
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1604005825/ukuAlong_wireframe5.png" width=600>
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1604005825/ukuAlong_wireframe6.png" width=600>
 
