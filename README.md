@@ -181,29 +181,121 @@ Heart Button (just a variable to control it. eg: isFave)
   - Discuss (group chat, users can create their own groups)
   - Direct (one-to-one tutorial Mrugesh shared)
 
-### Networking
+### Networking (using Firebase)
 
 #### A list of network requests by screen:
 
 - Home Feed Screen
   - (Read/GET) Query all covers from our database
+  ```swift
+  listener = query.addSnapshotListener { [unowned self] (snapshot, error) in
+      guard let snapshot = snapshot else {
+        print("Error fetching snapshot results: \(error!)")
+        return
+      }
+      let covers = snapshot.documents.map { (document) -> Cover in
+        let maybeCover: Cover?
+        do {
+          maybeCover = try document.data(as: Cover.self)
+        } catch {
+          fatalError("Unable to initialize type \(Cover.self) with dictionary \(document.data()): \(error)")
+        }
+        if let cover = maybeCover {
+          return cover
+        } else {
+          // Don't use fatalError here in a real app.
+          fatalError("Missing document of type \(Cover.self) at \(document.reference.path)")
+        }
+      }
+  ```
   - (Create/POST) Create a new like on a cover
   - (Delete) Unlike a cover
 - Chords Screen
   - (Read/GET) Query all chords from an existing API (Uberchord)
 - Profile Screen
+
   - (Read/GET) Query all the info of the user from our database
   - (Delete) Delete a recording
+
+  ```swift
+  ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+  if var user = currentData.value as? [String : AnyObject], let uid = Auth.auth().currentUser?.uid {
+    var recordings: Dictionary<String, Bool>
+    recordings = user["recordingArray"] as? [String : Bool] ?? [:]
+    var recordingCount = user["recordingCount"] as? Int ?? 0
+    if let _ = recordings[uid] {
+      // Unstar the post and remove self from stars
+      recordingCount -= 1
+      recordings.removeValue(forKey: uid)
+    } else {
+      // Star the post and add self to stars
+      recordingCount += 1
+      recordings[uid] = true
+    }
+    user["recordingCount"] = recordingCount as AnyObject?
+    user["recordings"] = recordings as AnyObject?
+
+    // Set value and report transaction success
+    currentData.value = user
+
+    return TransactionResult.success(withValue: currentData)
+  }
+  return TransactionResult.success(withValue: currentData)
+  }) { (error, committed, snapshot) in
+  if let error = error {
+    print(error.localizedDescription)
+  }
+  }
+  ```
+
 - Edit Profile Screen
   - (Update/PUT) Update user profile info
+  ```swift
+  guard let key = ref.child("user").childByAutoId().key else { return }
+  let user = ["userId": userID,
+            "username": username]
+  let userUpdates = ["/users/\(userID)/\(key)": user]
+  ref.updateChildValues(userUpdates)
+  ```
 - Create Song Chords Screen
   - (Read/GET) Query the lyrics of the song based on the song title that user input from existing API
   - (Create/POST) Create a new cover
+  ```swift
+  ref.child("covers").child(cover.coverId).setValue(["content": content]) {
+    (error:Error?, ref:DatabaseReference) in
+    if let error = error {
+      print("Data could not be saved: \(error).")
+    } else {
+      print("Data saved successfully!")
+    }
+  }
+  ```
 - Song Screen
   - (Read/GET) Query the info of the cover from our database (cover model)
-  - (Create/POST) Create a new like on a cover
-  - (Delete) Unlike a cover
-  - (Create/POST) Create a new recording of the user/cover
+  ```swift
+  listener = query.addSnapshotListener { [unowned self] (snapshot, error) in
+      guard let snapshot = snapshot else {
+        print("Error fetching snapshot results: \(error!)")
+        return
+      }
+      let covers = snapshot.documents.map { (document) -> Cover in
+        let maybeCover: Cover?
+        do {
+          maybeCover = try document.data(as: Cover.self)
+        } catch {
+          fatalError("Unable to initialize type \(Cover.self) with dictionary \(document.data()): \(error)")
+        }
+        if let cover = maybeCover {
+          return cover
+        } else {
+          // Don't use fatalError here in a real app.
+          fatalError("Missing document of type \(Cover.self) at \(document.reference.path)")
+        }
+      }
+  ```
+- (Create/POST) Create a new like on a cover
+- (Delete) Unlike a cover
+- (Create/POST) Create a new recording of the user/cover
 - Recordings Screen (a grid of all recordings)
   - (Read/GET) Query all the recordings of a certain cover from our database (recording model)
 - Recording is playing Screen (a single recording)
@@ -212,7 +304,7 @@ Heart Button (just a variable to control it. eg: isFave)
   - (Read/GET) Query all the messages from our database
   - (Create/POST) Create a message
 
-#### Basic snippets for each Firebase network request:
+#### Basic snippets for each Firebase network request: (see snippets in the section above)
 
 ### [OPTIONAL:] Existing API Endpoints
 
