@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -116,7 +116,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Uku Along" id="ido-dX-gB7">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="escape" catalog="system" id="VaO-MF-09d"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="po1-5A-5I5"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="po1-5A-5I5">
+                            <connections>
+                                <segue destination="RVl-CH-U6H" kind="presentation" id="E3w-4z-ocp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCW-dR-gHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -185,7 +189,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Uku Along" id="eCW-Kn-wU9">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="escape" catalog="system" id="GV7-1j-xzN"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="Z43-23-0rp"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="Z43-23-0rp">
+                            <connections>
+                                <segue destination="RVl-CH-U6H" kind="presentation" id="gid-kk-Ovo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPM-vG-m14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -213,7 +221,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Uku Along" id="GNi-IJ-Mew">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="escape" catalog="system" id="6au-mZ-XKY"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="pdj-YK-oO1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="pdj-YK-oO1">
+                            <connections>
+                                <segue destination="RVl-CH-U6H" kind="presentation" id="Frd-Xy-Ruq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRC-Q8-Mmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -241,7 +253,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Uku Along" id="ET1-o5-7bq">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="escape" catalog="system" id="Pa6-12-N0I"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="e22-W2-aue"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="e22-W2-aue">
+                            <connections>
+                                <segue destination="RVl-CH-U6H" kind="presentation" id="xsg-vP-RbQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XL-Ba-eoo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -305,13 +321,59 @@
             </objects>
             <point key="canvasLocation" x="4690" y="481"/>
         </scene>
+        <!--Uku Along-->
+        <scene sceneID="72h-ai-MJ2">
+            <objects>
+                <viewController id="RVl-CH-U6H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z1E-CT-zcC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9N-92-bhs">
+                                <rect key="frame" x="20" y="422" width="374" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fzw-OU-0b0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Uku Along" id="zGI-GK-5R9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vm3-VI-I6o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6100" y="1233"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vJh-G2-Rbl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qcL-Uq-vi8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V4h-6c-dm6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RVl-CH-U6H" kind="relationship" relationship="rootViewController" id="poV-4L-PE3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEL-EZ-u42" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6100" y="483"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Frd-Xy-Ruq"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="circle-plus" width="24" height="24"/>
-        <image name="escape" catalog="system" width="64" height="60"/>
+        <image name="escape" catalog="system" width="128" height="121"/>
         <image name="home" width="24" height="24"/>
         <image name="music-note" width="24" height="24"/>
-        <image name="text.bubble" catalog="system" width="64" height="54"/>
+        <image name="text.bubble" catalog="system" width="128" height="110"/>
         <image name="ukulele" width="512" height="512"/>
         <image name="user" width="24" height="24"/>
     </resources>
