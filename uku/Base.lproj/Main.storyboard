@@ -7,74 +7,106 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="uku" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="uku" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log in page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7R9-5g-GKc">
-                                <rect key="frame" x="47" y="345" width="320" height="265"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uku Along" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeP-rx-d9L">
+                                <rect key="frame" x="36" y="284" width="343" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ukulele" translatesAutoresizingMaskIntoConstraints="NO" id="449-Bg-ZwD">
+                                <rect key="frame" x="51" y="124" width="313" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePg-xt-ZJ6">
+                                <rect key="frame" x="43" y="427" width="133" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqZ-mt-XGx">
+                                <rect key="frame" x="43" y="563" width="125" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="kimo" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Sqw-P6-tiD">
+                                <rect key="frame" x="43" y="471" width="328" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nnnnnnn" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxi-TJ-uas">
+                                <rect key="frame" x="43" y="607" width="328" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nge-k2-gdx">
+                                <rect key="frame" x="43" y="718" width="133" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.629113853" green="0.3378011286" blue="0.13462314010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="0.62911385297775269" green="0.33780112862586975" blue="0.13462314009666443" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="bhr-fe-NZa" kind="show" id="79f-Eh-GyL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AP-ZD-Run">
+                                <rect key="frame" x="236" y="718" width="133" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.629113853" green="0.3378011286" blue="0.13462314010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="0.629113853" green="0.3378011286" blue="0.13462314010000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Zab-7H-FKl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1229" y="-356"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hvD-Mf-o0a">
-            <objects>
-                <viewController id="nbY-pI-n3N" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z0h-Pr-015">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ine-h3-hLE">
-                                <rect key="frame" x="121" y="119" width="235" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEG-eF-NhS">
-                                <rect key="frame" x="67" y="187" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="L7M-7B-7jC"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="vBL-om-pUn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t7a-xV-hWa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2483" y="1254"/>
-        </scene>
-        <!--View Controller-->
+        <!--Uku Along-->
         <scene sceneID="whe-lg-qHg">
             <objects>
                 <viewController id="5ou-4r-TMd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MFL-8d-L7Z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mv-BP-RXq">
-                                <rect key="frame" x="68" y="325" width="236" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mv-BP-RXq">
+                                <rect key="frame" x="41" y="332" width="332" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -82,16 +114,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tcw-Mf-jWk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3CL-IB-40v"/>
+                    <navigationItem key="navigationItem" title="Uku Along" id="ido-dX-gB7">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="escape" catalog="system" id="VaO-MF-09d"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="po1-5A-5I5"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCW-dR-gHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="1234"/>
+            <point key="canvasLocation" x="1147.8260869565217" y="1232.8125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0lT-YW-1ft">
             <objects>
-                <tabBarController id="bhr-fe-NZa" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="bhr-fe-NZa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WWY-lV-HEU"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8OS-PW-GVQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -99,21 +135,24 @@
                     </tabBar>
                     <connections>
                         <segue destination="0aO-9I-A7W" kind="relationship" relationship="viewControllers" id="0mg-Hh-zAd"/>
-                        <segue destination="kb8-CC-HA2" kind="relationship" relationship="viewControllers" id="Gi2-FS-WiD"/>
+                        <segue destination="8eZ-jk-YzJ" kind="relationship" relationship="viewControllers" id="eQ3-Jr-KGs"/>
+                        <segue destination="Shz-Zy-zGl" kind="relationship" relationship="viewControllers" id="IPl-pE-lEQ"/>
+                        <segue destination="FRH-Z4-OdM" kind="relationship" relationship="viewControllers" id="8sQ-Gw-WzU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwE-B5-Qfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="-224"/>
+            <point key="canvasLocation" x="2626" y="-356"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="wgq-wN-Gge">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0aO-9I-A7W" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="B9t-2S-pvk"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="B9t-2S-pvk"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Abf-It-jy5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lZe-QX-7eP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -125,24 +164,155 @@
             </objects>
             <point key="canvasLocation" x="1147.8260869565217" y="480.80357142857139"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="IbK-9v-0s7">
+        <!--Uku Along-->
+        <scene sceneID="qM6-KB-Co7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kb8-CC-HA2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="TxN-HD-Wd4"/>
+                <viewController id="ZCK-FN-DGH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LxX-eJ-6zi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Cover Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHh-w6-Sdh">
+                                <rect key="frame" x="36" y="332" width="342" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="a4B-Tq-A4q"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Uku Along" id="eCW-Kn-wU9">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="escape" catalog="system" id="GV7-1j-xzN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="Z43-23-0rp"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPM-vG-m14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2125" y="1233"/>
+        </scene>
+        <!--Uku Along-->
+        <scene sceneID="dVQ-T6-l0o">
+            <objects>
+                <viewController id="ndL-sD-KUc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1dA-vv-rkP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chords Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTF-h6-puo">
+                                <rect key="frame" x="36" y="332" width="342" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="zAv-oA-iBB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Uku Along" id="GNi-IJ-Mew">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="escape" catalog="system" id="6au-mZ-XKY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="pdj-YK-oO1"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRC-Q8-Mmn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457" y="1233"/>
+        </scene>
+        <!--Uku Along-->
+        <scene sceneID="vym-0T-nza">
+            <objects>
+                <viewController id="Lzn-rb-Aul" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Fr-MK-OLI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLl-Lj-00D">
+                                <rect key="frame" x="36" y="332" width="342" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Btd-ZD-vLs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Uku Along" id="ET1-o5-7bq">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="escape" catalog="system" id="Pa6-12-N0I"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="text.bubble" catalog="system" id="e22-W2-aue"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0XL-Ba-eoo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4690" y="1233"/>
+        </scene>
+        <!--Add Cover-->
+        <scene sceneID="ZfO-so-Bhc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8eZ-jk-YzJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Cover" image="circle-plus" id="oIR-8o-A0Z"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VRH-zV-1xO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OVd-Yg-8tD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="nbY-pI-n3N" kind="relationship" relationship="rootViewController" id="gjU-5g-q5D"/>
+                        <segue destination="ZCK-FN-DGH" kind="relationship" relationship="rootViewController" id="KHg-fb-CVa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y20-LJ-iwA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vwy-eH-1Ln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2482.608695652174" y="504.91071428571428"/>
+            <point key="canvasLocation" x="2124.6376811594205" y="483.48214285714283"/>
+        </scene>
+        <!--Chords-->
+        <scene sceneID="3yH-Km-fZx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Shz-Zy-zGl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chords" image="music-note" id="LGf-Z3-JdC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q3Y-RU-Waq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ndL-sD-KUc" kind="relationship" relationship="rootViewController" id="meN-pV-NoH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0Z-DO-iKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3456.521739130435" y="482.8125"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="q6k-Zn-3tz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FRH-Z4-OdM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="Xl2-qU-mOD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hdy-4T-6yq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lzn-rb-Aul" kind="relationship" relationship="rootViewController" id="bPz-Y4-9AY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5O4-Uf-PzG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4690" y="481"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle-plus" width="24" height="24"/>
+        <image name="escape" catalog="system" width="64" height="60"/>
+        <image name="home" width="24" height="24"/>
+        <image name="music-note" width="24" height="24"/>
+        <image name="text.bubble" catalog="system" width="64" height="54"/>
+        <image name="ukulele" width="512" height="512"/>
+        <image name="user" width="24" height="24"/>
+    </resources>
 </document>

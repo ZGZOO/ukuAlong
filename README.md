@@ -311,3 +311,7 @@ Heart Button (just a variable to control it. eg: isFave)
 - Uberchord API (read more carefully into that, and test if it can work)
 - songsterr API (songs info) (use when user create a cover, song's info)
 - Spotify API (use when user create a cover, song's info)
+
+## Sprint 1
+- Build progress GIF
+<img src="https://res.cloudinary.com/headincloud/image/upload/v1604647593/ukualong_sprint1_gif_uc7h7m.gif" width=600>
