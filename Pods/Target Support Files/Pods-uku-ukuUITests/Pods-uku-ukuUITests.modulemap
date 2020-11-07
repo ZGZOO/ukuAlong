@@ -1,0 +1,6 @@
+framework module Pods_uku_ukuUITests {
+  umbrella header "Pods-uku-ukuUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
