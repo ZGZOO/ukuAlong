@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if Auth.auth().currentUser != nil {
             let main = UIStoryboard(name: "Main", bundle: nil)
-            let homeNavigationController = main.instantiateViewController(withIdentifier: "HomeNavigationController")
-            window?.rootViewController = homeNavigationController
+            let tabBarController = main.instantiateViewController(withIdentifier: "TabBarController")
+            window?.rootViewController = tabBarController
         }
     }
 

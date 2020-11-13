@@ -53,35 +53,35 @@ class SignUpViewController: UIViewController {
                 alertUserCreateError()
                 return
         }
-        
+                
         // FireBase Create Account
         
-        DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
-            
-            guard let strongSelf = self else {
-                return
-            }
-            
-            guard !exists else {
-                // user exists
-                strongSelf.alertUserCreateError(message: "User with email already exists")
-                return
-            }
-            
+//        DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
+//
+//            guard let strongSelf = self else {
+//                return
+//            }
+//
+//            guard !exists else {
+//                // user exists
+//                strongSelf.alertUserCreateError(message: "User with email already exists")
+//                return
+//            }
+//
             FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                guard authResult != nil, error == nil else {
+                guard let user = authResult?.user, error == nil else {
                     print("Error Creating User")
                   return
                 }
                 
-                let ukuAlongUser = UkuAlongUser(firstName: firstname,
+                let ukuAlongUser = UkuAlongUser(userUID: user.uid,
+                                                firstName: firstname,
                                                 lastName: lastname,
                                                 emailAddress: email)
-                
                 DatabaseManager.shared.insertUser(with: ukuAlongUser, completion: { success in
                     if success {
                         //uploadImage
-                        guard let image = strongSelf.imageView.image, let data = image.pngData() else {
+                        guard let image = self.imageView.image, let data = image.pngData() else {
                             return
                         }
                         
@@ -100,13 +100,13 @@ class SignUpViewController: UIViewController {
                 })
                 
                 let main = UIStoryboard(name: "Main", bundle: nil)
-                let homeNavigationController = main.instantiateViewController(withIdentifier: "HomeNavigationController")
+                let tabBarController = main.instantiateViewController(withIdentifier: "TabBarController")
                 let scene = UIApplication.shared.connectedScenes.first
                 if let delegate : SceneDelegate = (scene?.delegate as? SceneDelegate) {
-                    delegate.window?.rootViewController = homeNavigationController
+                    delegate.window?.rootViewController = tabBarController
                 }
             }
-        })
+//        })
     }
     
     func alertUserCreateError(message: String = "Please enter all details to create account") {
