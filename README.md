@@ -315,3 +315,8 @@ Heart Button (just a variable to control it. eg: isFave)
 ## Sprint 1
 - Build progress GIF
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1604647593/ukualong_sprint1_gif_uc7h7m.gif" width=600>
+
+
+## Sprint 2
+- Build progress GIF
+<img src="uku_along_2.gif" width=600>
