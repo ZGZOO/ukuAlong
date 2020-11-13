@@ -38,6 +38,7 @@ Uku Along is an app in which users can create ukulele chords of their original s
   - The artist
   - The chords
 - [ ] User can search the songs that they want to learn
+- [x] User can like/unlike the songs that they want to learn
 - [x] User can record him/herself while playing along
 - [ ] User can comment on other users' covers
 - [ ] User can see other people's comment
