@@ -16,24 +16,13 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-//        if UserDefaults.standard.bool(forKey: "userLoggedIn") == true {
-//            self.performSegue(withIdentifier: "loginToHome", sender: self)
-//        }
     }
-    
-//    @IBOutlet weak var emailField: UITextField!
 
     @IBOutlet weak var emailField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var loginButton: UIButton!
-    
-    
-//    @IBAction func onRegister(_ sender: Any) {
-//        self.performSegue(withIdentifier: "registerSegue", sender: self)
-//    }
     
     @IBAction func onSignUp(_ sender: Any) {
         self.performSegue(withIdentifier: "signUpSegue", sender: self)
@@ -47,7 +36,8 @@ class LoginViewController: UIViewController {
                 alertUserLoginError()
                 return
         }
-        // Firebase Login
+        
+        
         Firebase.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] authResult, error in
             guard let strongSelf = self else {
                 return
@@ -58,10 +48,9 @@ class LoginViewController: UIViewController {
                 return
             }
             let user = result.user
+//            DatabaseManager.shared
             print("Logged in user: \(user)")
-//            UserDefaults.standard.set(true, forKey: "userLoggedIn")
             self!.performSegue(withIdentifier: "loginToHome", sender: self)
-//            strongSelf.navigationController?.dismiss(animated: true, completion: nil)
         })
     }
     

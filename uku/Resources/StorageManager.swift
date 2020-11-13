@@ -42,8 +42,49 @@ final class StorageManager {
         })
     }
     
+    public func uploadRecording(with fileURL: URL, fileName: String, completion: @escaping UploadPictureCompletion) {
+        storage.child("recordings/\(fileName)").putFile(from: fileURL, metadata: nil, completion: { [weak self] metadata,error in
+            guard error == nil else {
+                print("failed to upload")
+                completion(.failure(StorageErrors.failedToUpload))
+                return
+            }
+            
+            self?.storage.child("recordings/\(fileName)").downloadURL(completion: { (url, error) in
+                guard let url = url else {
+                    print("Failed to get URL")
+                    completion(.failure(StorageErrors.failedToGetDownloadUrl))
+                    return
+                }
+                let urlString = url.absoluteString
+                print("Download URL Absolute String : \(urlString)")
+                completion(.success(urlString))
+            })
+        })
+    }
+    
+//    public func downloadCover(with reference: String, completion:((Result<URL, Error>)->Void )) {
+//        storage.child(reference).downloadURL(completion: { url, error in
+//            guard let url=url, error == nil else {
+//                completion(.failure(StorageErrors.failedToUpload))
+//                return
+//            }
+//            
+//            completion(.success(url))
+//        })
+//    }
+    
     public enum StorageErrors: Error {
         case failedToUpload
         case failedToGetDownloadUrl
     }
+}
+
+public struct CoverRecording {
+    var recordingID: String
+    var coverID: String
+    var coverCreatorID: String
+    var songName: String
+    var url: URL?
+    var video: UIImage?
 }
