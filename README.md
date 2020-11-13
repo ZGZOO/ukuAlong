@@ -33,12 +33,12 @@ Uku Along is an app in which users can create ukulele chords of their original s
 **Required Must-have Stories**
 
 - [x] User can sign up, sign in, stay signed in
-- [ ] User can create a song that they want to cover
+- [x] User can create a song that they want to cover
   - The title of the song
   - The artist
   - The chords
 - [ ] User can search the songs that they want to learn
-- [ ] User can record him/herself while playing along
+- [x] User can record him/herself while playing along
 - [ ] User can comment on other users' covers
 - [ ] User can see other people's comment
 - [ ] User can chat with other users
