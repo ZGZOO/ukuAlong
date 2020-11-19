@@ -43,10 +43,11 @@ Uku Along is an app in which users can create ukulele chords of their original s
 - [ ] User can comment on other users' covers
 - [ ] User can see other people's comment
 - [ ] User can chat with other users
+- [x] User can see the lyrics
 
 **Optional Nice-to-have Stories**
 
-- User can see the lyrics
+
 - User can leave notes for him/herself (only visible to the user)
 
 ### 2. Screen Archetypes
