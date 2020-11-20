@@ -16,6 +16,7 @@ class CoverTableViewCell: UITableViewCell {
     @IBOutlet weak var songArtist: UILabel!
     @IBOutlet weak var coverCreator: UILabel!
     @IBOutlet weak var favCount: UILabel!
+    @IBOutlet weak var favButton: UIButton!
     
     var coverKey: String?
     var coverRef: DatabaseReference!
@@ -30,52 +31,49 @@ class CoverTableViewCell: UITableViewCell {
     @IBAction func didTapFavButton(_ sender: Any) {
         print("button tapped")
         if let coverKey = coverKey {
-          coverRef = Database.database().reference().child("covers").child(coverKey)
-          incrementFavCount(forRef: coverRef)
-          coverRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            if let uid = value?["coverCreatorId"] as? String {
-              let userPostRef = Database.database().reference()
-                .child("user-posts")
-                .child(uid)
-                .child(coverKey)
-              self.incrementFavCount(forRef: userPostRef)
-            }
-          })
+            print(coverKey)
+            coverRef = Database.database().reference().child("covers").child(coverKey)
+            incrementFavCount(forRef: coverRef)
+            coverRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                let value = snapshot.value as? NSDictionary
+                if let uid = value?["coverCreatorId"] as? String {
+                    let userPostRef = Database.database().reference()
+                        .child("user-covers")
+                        .child(uid)
+                        .child(coverKey)
+                    self.incrementFavCount(forRef: userPostRef)
+                }
+            })
         }
     }
     
     func incrementFavCount(forRef ref: DatabaseReference) {
-      // [START post_stars_transaction]
-      ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
-        if var cover = currentData.value as? [String : AnyObject], let uid = Auth.auth().currentUser?.uid {
-          var fav: Dictionary<String, Bool>
-          fav = cover["fav"] as? [String : Bool] ?? [:]
-          var favCount = cover["favCount"] as? Int ?? 0
-          if let _ = fav[uid] {
-            // Unstar the post and remove self from stars
-            favCount -= 1
-            fav.removeValue(forKey: uid)
-          } else {
-            // Star the post and add self to stars
-            favCount += 1
-            fav[uid] = true
-          }
-          cover["favCount"] = favCount as AnyObject?
-          cover["fav"] = fav as AnyObject?
+        ref.runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+            if var cover = currentData.value as? [String : AnyObject], let uid = Auth.auth().currentUser?.uid {
+                var fav: Dictionary<String, Bool>
+                fav = cover["fav"] as? [String : Bool] ?? [:]
+                var favCount = cover["favCount"] as? Int ?? 0
+                if let _ = fav[uid] {
+                    favCount -= 1
+                    fav.removeValue(forKey: uid)
+                } else {
+                    favCount += 1
+                    fav[uid] = true
+                }
+                cover["favCount"] = favCount as AnyObject?
+                cover["fav"] = fav as AnyObject?
 
-          // Set value and report transaction success
-          currentData.value = cover
+                // Set value and report transaction success
+                currentData.value = cover
 
-          return TransactionResult.success(withValue: currentData)
+                return TransactionResult.success(withValue: currentData)
+            }
+            return TransactionResult.success(withValue: currentData)
+        }) { (error, committed, snapshot) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
         }
-        return TransactionResult.success(withValue: currentData)
-      }) { (error, committed, snapshot) in
-        if let error = error {
-          print(error.localizedDescription)
-        }
-      }
-      // [END post_stars_transaction]
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

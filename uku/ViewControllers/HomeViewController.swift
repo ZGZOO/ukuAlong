@@ -9,12 +9,14 @@
 import UIKit
 import Firebase
 import FirebaseUI
+import CoreServices
 
 class HomeViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var tableView: UITableView!
+    
     
     var ref: DatabaseReference!
     var dataSource: FUITableViewDataSource?
@@ -24,19 +26,24 @@ class HomeViewController: UIViewController, UITableViewDelegate {
         
         ref = Database.database().reference()
         
-//        let identifier = "cover"
-//        let nib = UINib(nibName: "CoverTableViewCell", bundle: nil)
-//        tableView.register(nib, forCellReuseIdentifier: identifier)
-        
         dataSource = FUITableViewDataSource(query: getQuery()) { (tableView, indexPath, snap) -> UITableViewCell in
             let cell = tableView.dequeueReusableCell(withIdentifier: "CoverTableViewCell", for: indexPath) as! CoverTableViewCell
             
-            guard let cover = UkuAlongCover(snapshot: snap) else { return cell }
+            guard let cover = UkuAlongCover(snapshot: snap) else {
+                print("returning default cell")
+                return cell
+            }
             cell.songTitle.text = cover.songTitle
             cell.songArtist.text = cover.songArtist
             cell.coverCreator.text = cover.coverCreator
-            cell.favCount.text = cover.favCount as? String
-            
+            cell.favCount.text = String(format: "%@", cover.favCount as! CVarArg)
+            var imageName = "suit.heart"
+            if (cover.fav?[self.getUid()]) != nil {
+                print("change icon")
+                imageName = "suit.heart.fill"
+            }
+            cell.favButton.setImage(UIImage(systemName: imageName), for: .normal)
+            cell.coverKey = snap.key
             return cell
         }
         dataSource?.bind(to: tableView)
@@ -50,9 +57,9 @@ class HomeViewController: UIViewController, UITableViewDelegate {
         self.tableView.reloadData()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 150
+//    }
 
     private func validateAuth() {
         let currentUser = FirebaseAuth.Auth.auth().currentUser
@@ -64,22 +71,9 @@ class HomeViewController: UIViewController, UITableViewDelegate {
                 delegate.window?.rootViewController = loginViewController
             }
         }
-        else {
-            let currentUserUID = currentUser!.uid
-            DatabaseManager.shared.getUserDetails(with: currentUserUID, completion: {
-                result in
-                switch result {
-                case .success(let fullname):
-                    UserDefaults.standard.set(fullname, forKey:"fullname")
-                case.failure(let error):
-                    print(error)
-                }
-            })
-        }
-
     }
     
-    func getUid() -> String {
+    public func getUid() -> String {
         return (Auth.auth().currentUser?.uid)!
     }
     
@@ -89,17 +83,15 @@ class HomeViewController: UIViewController, UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      guard let indexPath: IndexPath = sender as? IndexPath else { return }
-      guard let detail: CoverDetailViewController = segue.destination as? CoverDetailViewController else {
-        return
-      }
-      if let dataSource = dataSource {
-        print("Key:\(dataSource.snapshot(at: indexPath.row).key)")
-        detail.coverKey = dataSource.snapshot(at: indexPath.row).key
-      }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let detailViewController = segue.destination as! CoverDetailViewController
+            detailViewController.coverKey = (dataSource?.snapshot(at: indexPath.row).key)!
+        }
     }
 
-    
     @IBAction func onLogOut(_ sender: Any) {
         do {
             try FirebaseAuth.Auth.auth().signOut()

@@ -10,12 +10,22 @@
 		2FBFC577D4CA204419F8F9EF /* Pods_uku_ukuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D483B5DE381AFFD59F3C3B02 /* Pods_uku_ukuUITests.framework */; };
 		520B6E74DC050227E27E11EF /* Pods_ukuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F9FD7ED1263C98A743659 /* Pods_ukuTests.framework */; };
 		811A78A3FAF7411B4BDCC437 /* Pods_uku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32FC9A600253C55370453303 /* Pods_uku.framework */; };
+		840606C62564B50A00D71D73 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840606C52564B50A00D71D73 /* API.swift */; };
 		8461A00B25561E40005FBCDC /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461A00A25561E40005FBCDC /* StorageManager.swift */; };
+		84759397255DCA050064A871 /* CoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84759396255DCA050064A871 /* CoverTableViewCell.swift */; };
+		8475939A255DD4E40064A871 /* NewChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84759399255DD4E40064A871 /* NewChordsViewController.swift */; };
+		847C48B4255E38C900A4AC7E /* UkuAlongCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C48B3255E38C900A4AC7E /* UkuAlongCover.swift */; };
+		84916ED9255F769F000B0010 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84916ED8255F769F000B0010 /* ProfileViewController.swift */; };
+		84BA880C255E616D00CD56A5 /* CoverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA880B255E616D00CD56A5 /* CoverDetailViewController.swift */; };
 		84BC36B42555EE9E003E5EEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84BC36AF2555EE9D003E5EEF /* GoogleService-Info.plist */; };
 		84BC36B52555EE9E003E5EEF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC36B02555EE9D003E5EEF /* SignUpViewController.swift */; };
 		84BC36B62555EE9E003E5EEF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC36B12555EE9D003E5EEF /* HomeViewController.swift */; };
 		84BC36B72555EE9E003E5EEF /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC36B22555EE9D003E5EEF /* DatabaseManager.swift */; };
 		84BC36B82555EE9E003E5EEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC36B32555EE9D003E5EEF /* LoginViewController.swift */; };
+		84BE28572567622C003E95D6 /* UserCoversTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE28562567622C003E95D6 /* UserCoversTableViewCell.swift */; };
+		84D33C1F25587BF300FFCD14 /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D33C1E25587BF300FFCD14 /* ChordsViewController.swift */; };
+		84E2C9B9256758B100B09D5E /* UsersRecordingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2C9B8256758B100B09D5E /* UsersRecordingsViewController.swift */; };
+		84E2C9BB256758C700B09D5E /* UsersCoversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2C9BA256758C700B09D5E /* UsersCoversViewController.swift */; };
 		B17BDF8C25315EEA00A70DEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BDF8B25315EEA00A70DEB /* AppDelegate.swift */; };
 		B17BDF8E25315EEA00A70DEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BDF8D25315EEA00A70DEB /* SceneDelegate.swift */; };
 		B17BDF9025315EEA00A70DEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BDF8F25315EEA00A70DEB /* ViewController.swift */; };
@@ -48,12 +58,22 @@
 		32FC9A600253C55370453303 /* Pods_uku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3935E9DB39AE03C595D122F8 /* Pods-uku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uku.release.xcconfig"; path = "Target Support Files/Pods-uku/Pods-uku.release.xcconfig"; sourceTree = "<group>"; };
 		576F9FD7ED1263C98A743659 /* Pods_ukuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ukuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840606C52564B50A00D71D73 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8461A00A25561E40005FBCDC /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		84759396255DCA050064A871 /* CoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverTableViewCell.swift; sourceTree = "<group>"; };
+		84759399255DD4E40064A871 /* NewChordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChordsViewController.swift; sourceTree = "<group>"; };
+		847C48B3255E38C900A4AC7E /* UkuAlongCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UkuAlongCover.swift; sourceTree = "<group>"; };
+		84916ED8255F769F000B0010 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		84BA880B255E616D00CD56A5 /* CoverDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverDetailViewController.swift; sourceTree = "<group>"; };
 		84BC36AF2555EE9D003E5EEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84BC36B02555EE9D003E5EEF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84BC36B12555EE9D003E5EEF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		84BC36B22555EE9D003E5EEF /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		84BC36B32555EE9D003E5EEF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84BE28562567622C003E95D6 /* UserCoversTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoversTableViewCell.swift; sourceTree = "<group>"; };
+		84D33C1E25587BF300FFCD14 /* ChordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsViewController.swift; sourceTree = "<group>"; };
+		84E2C9B8256758B100B09D5E /* UsersRecordingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRecordingsViewController.swift; sourceTree = "<group>"; };
+		84E2C9BA256758C700B09D5E /* UsersCoversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCoversViewController.swift; sourceTree = "<group>"; };
 		B17BDF8825315EEA00A70DEB /* uku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B17BDF8B25315EEA00A70DEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B17BDF8D25315EEA00A70DEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +146,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		840606C42564B4FA00D71D73 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				840606C52564B50A00D71D73 /* API.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		8461A00625561D84005FBCDC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +162,7 @@
 				B17BDF8D25315EEA00A70DEB /* SceneDelegate.swift */,
 				B17BDF9425315EEE00A70DEB /* Assets.xcassets */,
 				8461A00A25561E40005FBCDC /* StorageManager.swift */,
+				847C48B3255E38C900A4AC7E /* UkuAlongCover.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -144,6 +173,12 @@
 				84BC36B12555EE9D003E5EEF /* HomeViewController.swift */,
 				84BC36B32555EE9D003E5EEF /* LoginViewController.swift */,
 				84BC36B02555EE9D003E5EEF /* SignUpViewController.swift */,
+				84D33C1E25587BF300FFCD14 /* ChordsViewController.swift */,
+				84759399255DD4E40064A871 /* NewChordsViewController.swift */,
+				84BA880B255E616D00CD56A5 /* CoverDetailViewController.swift */,
+				84916ED8255F769F000B0010 /* ProfileViewController.swift */,
+				84E2C9B8256758B100B09D5E /* UsersRecordingsViewController.swift */,
+				84E2C9BA256758C700B09D5E /* UsersCoversViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -155,6 +190,15 @@
 				B17BDF9625315EEE00A70DEB /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		84759395255DC9DB0064A871 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84759396255DCA050064A871 /* CoverTableViewCell.swift */,
+				84BE28562567622C003E95D6 /* UserCoversTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B17BDF7F25315EEA00A70DEB = {
@@ -182,6 +226,8 @@
 		B17BDF8A25315EEA00A70DEB /* uku */ = {
 			isa = PBXGroup;
 			children = (
+				840606C42564B4FA00D71D73 /* Networking */,
+				84759395255DC9DB0064A871 /* Cells */,
 				8461A00925561E21005FBCDC /* Storyboards */,
 				8461A00825561DAB005FBCDC /* ViewControllers */,
 				8461A00625561D84005FBCDC /* Resources */,
@@ -222,6 +268,7 @@
 				B17BDF8525315EEA00A70DEB /* Frameworks */,
 				B17BDF8625315EEA00A70DEB /* Resources */,
 				636BB86AC1A8D36BA50F2782 /* [CP] Embed Pods Frameworks */,
+				F2152FC60B46FBAE3B346563 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,6 +307,7 @@
 				B17BDFA625315EEF00A70DEB /* Frameworks */,
 				B17BDFA725315EEF00A70DEB /* Resources */,
 				17742D8DFD7EFF1906A10E13 /* [CP] Embed Pods Frameworks */,
+				C22F0DE7667758CF1B5CFE20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,6 +447,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-uku/Pods-uku-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C22F0DE7667758CF1B5CFE20 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-uku-ukuUITests/Pods-uku-ukuUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-uku-ukuUITests/Pods-uku-ukuUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-uku-ukuUITests/Pods-uku-ukuUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EB434F005EE2C2EF18C07338 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +484,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2152FC60B46FBAE3B346563 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-uku/Pods-uku-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-uku/Pods-uku-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-uku/Pods-uku-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FCD6EBAABBBE0E4C9F99F83F /* [CP] Check Pods Manifest.lock */ = {
@@ -450,12 +532,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BA880C255E616D00CD56A5 /* CoverDetailViewController.swift in Sources */,
 				84BC36B82555EE9E003E5EEF /* LoginViewController.swift in Sources */,
+				84D33C1F25587BF300FFCD14 /* ChordsViewController.swift in Sources */,
 				84BC36B62555EE9E003E5EEF /* HomeViewController.swift in Sources */,
+				840606C62564B50A00D71D73 /* API.swift in Sources */,
+				84916ED9255F769F000B0010 /* ProfileViewController.swift in Sources */,
+				847C48B4255E38C900A4AC7E /* UkuAlongCover.swift in Sources */,
+				84E2C9B9256758B100B09D5E /* UsersRecordingsViewController.swift in Sources */,
 				B17BDF9025315EEA00A70DEB /* ViewController.swift in Sources */,
+				84759397255DCA050064A871 /* CoverTableViewCell.swift in Sources */,
+				84BE28572567622C003E95D6 /* UserCoversTableViewCell.swift in Sources */,
 				84BC36B72555EE9E003E5EEF /* DatabaseManager.swift in Sources */,
 				B17BDF8C25315EEA00A70DEB /* AppDelegate.swift in Sources */,
 				B17BDF8E25315EEA00A70DEB /* SceneDelegate.swift in Sources */,
+				8475939A255DD4E40064A871 /* NewChordsViewController.swift in Sources */,
+				84E2C9BB256758C700B09D5E /* UsersCoversViewController.swift in Sources */,
 				84BC36B52555EE9E003E5EEF /* SignUpViewController.swift in Sources */,
 				8461A00B25561E40005FBCDC /* StorageManager.swift in Sources */,
 			);
@@ -638,7 +730,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Codepath.uku;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.ukualong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -657,7 +749,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Codepath.uku;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.ukualong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
