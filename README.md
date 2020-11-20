@@ -33,19 +33,21 @@ Uku Along is an app in which users can create ukulele chords of their original s
 **Required Must-have Stories**
 
 - [x] User can sign up, sign in, stay signed in
-- [ ] User can create a song that they want to cover
+- [x] User can create a song that they want to cover
   - The title of the song
   - The artist
   - The chords
 - [ ] User can search the songs that they want to learn
-- [ ] User can record him/herself while playing along
+- [x] User can like/unlike the songs that they want to learn
+- [x] User can record him/herself while playing along
 - [ ] User can comment on other users' covers
 - [ ] User can see other people's comment
 - [ ] User can chat with other users
+- [x] User can see the lyrics
 
 **Optional Nice-to-have Stories**
 
-- User can see the lyrics
+
 - User can leave notes for him/herself (only visible to the user)
 
 ### 2. Screen Archetypes
@@ -315,3 +317,8 @@ Heart Button (just a variable to control it. eg: isFave)
 ## Sprint 1
 - Build progress GIF
 <img src="https://res.cloudinary.com/headincloud/image/upload/v1604647593/ukualong_sprint1_gif_uc7h7m.gif" width=600>
+
+
+## Sprint 2
+- Build progress GIF
+<img src="uku_along_2.gif" width=600>
