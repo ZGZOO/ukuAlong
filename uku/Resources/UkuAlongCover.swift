@@ -39,6 +39,9 @@ public class UkuAlongCover:NSObject {
         guard let songArtist = dict["songArtist"]  as? String else { return nil }
         guard let coverContent = dict["coverContent"]  as? String else { return nil }
         guard let coverCreatorId = dict["coverCreatorId"]  as? String else { return nil }
+        var fav: Dictionary<String, Bool>?
+        if (dict["fav"] != nil) { fav = dict["fav"] as! Dictionary<String, Bool> }
+//        guard let fav = dict["fav"] as? Dictionary<String, Bool> else { return nil }
         guard let favCount = dict["favCount"] else { return nil }
 
 
@@ -48,6 +51,7 @@ public class UkuAlongCover:NSObject {
         self.songArtist = songArtist
         self.coverContent = coverContent
         self.coverCreatorId = coverCreatorId
+        self.fav = fav
         self.favCount = favCount as AnyObject?
     }
 

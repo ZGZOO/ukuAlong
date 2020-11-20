@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class NewChordsViewController: UIViewController {
+class NewChordsViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var songName: UITextField!
     
@@ -25,8 +25,22 @@ class NewChordsViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.ref = Database.database().reference()
         
+        chordContent.delegate = self
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        let songname = songName.text
+        let songartist = songArtist.text
+        API.getLyrics(songName: songname!, songArtist: songartist! ) { (lyricsBody) in
+            
+            textView.text = "\n" + lyricsBody.replacingOccurrences(of: "\n", with: "\n\n")
+//            let string1 = NSAttributedString(string: lyricsBody, attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+//
+//            let newMutableString = string1.mutableCopy() as! NSMutableAttributedString
+//
+//            textView.attributedText = newMutableString.copy() as! NSAttributedString
+        }
+    }
     
     @IBAction func onPost(_ sender: Any) {
         guard let songName = songName.text,
